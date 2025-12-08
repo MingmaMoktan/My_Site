@@ -1,0 +1,254 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}About | MySite{% endblock %}
+
+{% block content %}
+
+<style>
+    /* Profile Section */
+    .profile-section {
+        margin-top: 80px;  /* increased to avoid being hidden under fixed header */
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .profile-section img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+    }
+    .profile-section h1 {
+        margin-bottom: 0.5rem;
+    }
+    .profile-section .lead {
+        margin-bottom: 0.5rem;
+    }
+    .profile-section p.text-secondary {
+        margin-bottom: 1rem;
+        color: #ccc;
+    }
+
+    /* General Section Spacing */
+    .section {
+        margin-bottom: 2rem;
+    }
+    .section-title {
+        margin-bottom: 0.6rem;
+        font-weight: 600;
+    }
+
+    /* Experience Items */
+    .experience-item {
+        margin-bottom: 1rem;
+    }
+    .experience-item h5 {
+        margin-bottom: 0.2rem;
+    }
+    .experience-item p.text-muted {
+        margin-bottom: 0.3rem;
+    }
+    .experience-item ul li {
+        margin-bottom: 0.2rem;
+    }
+
+    /* Education Items */
+    .education-item {
+        margin-bottom: 1rem;
+    }
+    .education-item h5 {
+        margin-bottom: 0.2rem;
+    }
+    .education-item p {
+        margin-bottom: 0.3rem;
+    }
+
+    /* Skill Boxes Flex Grid */
+    .skills-flex {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .skill-box {
+        background-color: #121212;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        flex: 1 1 calc(33.33% - 1rem); /* Three boxes per row */
+        min-width: 250px; /* ensures responsiveness on smaller screens */
+    }
+
+    .skill-box ul {
+        padding-left: 1.2rem;
+        margin-bottom: 0;
+    }
+    .skill-box ul li {
+        margin-bottom: 0.2rem;
+    }
+
+    @media (max-width: 992px) {
+        .skill-box {
+            flex: 1 1 calc(50% - 1rem); /* Two boxes per row for medium screens */
+        }
+    }
+
+    @media (max-width: 768px) {
+        .skill-box {
+            flex: 1 1 100%; /* full width on small screens */
+        }
+    }
+</style>
+
+<div class="container">
+
+    <!-- Profile Section -->
+    <div class="profile-section">
+        <img src="{% static 'portfolio/images/profile.jpg' %}" alt="Profile Picture" class="rounded-circle mb-3">
+        <h1 class="display-5 fw-bold">Mingma Moktan</h1>
+        <p class="lead">Data Engineering Intern</p>
+
+        <p class="mb-2">
+            <a href="mailto:mingma.moktan0831@gmail.com" class="text-light mx-2"><i class="bi bi-envelope"></i></a>
+            <a href="tel:+358442463796" class="text-light mx-2"><i class="bi bi-telephone"></i></a>
+            <a href="https://www.linkedin.com/in/mingma-moktan/" target="_blank" class="text-light mx-2"><i class="bi bi-linkedin"></i></a>
+            <a href="https://github.com/MingmaMoktan" target="_blank" class="text-light mx-2"><i class="bi bi-github"></i></a>
+        </p>
+
+        <p class="text-secondary">Pori, Finland • 28130</p>
+    </div>
+
+    <!-- Professional Summary -->
+    <div class="section">
+        <h3 class="section-title"><i class="bi bi-person-vcard"></i> Professional Summary</h3>
+        <p>
+            I am a highly motivated and detail-oriented student of Artificial Intelligence and Data Engineering,
+            with strong technical, analytical, and organizational skills. Adept at applying data engineering,
+            IT support, laboratory assistance, and mechanical maintenance experience to deliver reliable,
+            structured, and efficient results. I am open to new opportunities to contribute.
+        </p>
+    </div>
+
+    <!-- Professional Experience -->
+    <div class="section">
+        <h3 class="section-title"><i class="bi bi-briefcase"></i> Professional Experience</h3>
+
+        <div class="experience-item">
+            <h5 class="fw-bold">Laboratory Assistant — Himalayan International Model School</h5>
+            <p class="text-muted">Aug 2014 – Apr 2017</p>
+            <ul>
+                <li>Scheduled and prepared practical classes for Physics, Chemistry, and Biology.</li>
+                <li>Assisted teachers during lab sessions and ensured proper use of equipment.</li>
+                <li>Maintained laboratory chemicals, materials, instruments, and cleanliness.</li>
+                <li>Enforced safety rules and ensured a secure environment for students.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h5 class="fw-bold">Chief Technology Officer — Venus Public School</h5>
+            <p class="text-muted">Feb 2020 – May 2024</p>
+            <ul>
+                <li>Managed digital databases for 950+ students and 40 staff, ensuring secure backups and data accuracy.</li>
+                <li>Oversaw network systems and academic management software for reports and records.</li>
+                <li>Supported administrative planning through documentation and technical coordination.</li>
+                <li>Led process automation to improve data access and efficiency.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Technical Skills / Tech Stacks -->
+    <div class="section">
+        <h3 class="section-title"><i class="bi bi-tools"></i> Technical Skills / Tech Stacks</h3>
+        <div class="skills-flex">
+            <div class="skill-box">
+                <strong>Data Engineering & Programming:</strong>
+                <ul>
+                    <li>Python</li>
+                    <li>SQL</li>
+                    <li>Bash</li>
+                    <li>Apache Spark (learning)</li>
+                    <li>Airflow (learning)</li>
+                    <li>Pandas</li>
+                    <li>NumPy</li>
+                </ul>
+            </div>
+            <div class="skill-box">
+                <strong>Database & Cloud:</strong>
+                <ul>
+                    <li>MySQL</li>
+                    <li>PostgreSQL</li>
+                    <li>MongoDB</li>
+                    <li>Snowflake (learning)</li>
+                    <li>IBM Cloud</li>
+                </ul>
+            </div>
+            <div class="skill-box">
+                <strong>ETL & Data Modeling:</strong>
+                <ul>
+                    <li>Python ETL scripts</li>
+                    <li>dbt</li>
+                    <li>Snowflake Schema (learning)</li>
+                    <li>Data lakes</li>
+                    <li>JSON</li>
+                    <li>CSV</li>
+                </ul>
+            </div>
+            <div class="skill-box">
+                <strong>Tools & Environments:</strong>
+                <ul>
+                    <li>Linux</li>
+                    <li>Windows</li>
+                    <li>Docker (basics)</li>
+                    <li>VS Code</li>
+                    <li>JupyterLab</li>
+                    <li>Agile concepts</li>
+                    <li>CI/CD basics</li>
+                </ul>
+            </div>
+            <div class="skill-box">
+                <strong>Visualization:</strong>
+                <ul>
+                    <li>Matplotlib</li>
+                </ul>
+            </div>
+            <div class="skill-box">
+                <strong>Other:</strong>
+                <ul>
+                    <li>Error handling</li>
+                    <li>Documentation</li>
+                    <li>Archiving</li>
+                    <li>Web scraping</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Certifications -->
+    <div class="section">
+        <h3 class="section-title"><i class="bi bi-award"></i> Certifications</h3>
+        <ul>
+            <li>IBM Data Engineering Professional Certificate (In Progress)</li>
+            <li>Python for Data Science — Cognitive Class AI</li>
+        </ul>
+    </div>
+
+    <!-- Education -->
+    <div class="section">
+        <h3 class="section-title"><i class="bi bi-mortarboard"></i> Education</h3>
+
+        <div class="education-item">
+            <h5 class="fw-bold">Bachelor of Engineering — AI & Data Engineering</h5>
+            <p class="text-muted">Satakunta University of Applied Sciences — Pori, Finland (August 2024 – Ongoing)</p>
+            <p>GPA: 4.33</p>
+            <p><strong>Relevant Courses:</strong> Python scripting, SQL, NoSQL, Data Structures, Machine Learning, Deep Learning, Neural Networks, Data Analytics, Server-side programming</p>
+        </div>
+
+        <div class="education-item">
+            <h5 class="fw-bold">Bachelor of Science — Physics</h5>
+            <p class="text-muted">Tribhuvan University — Kathmandu, Nepal (May 2015 – June 2020)</p>
+            <p>GPA: 2.5</p>
+            <p><strong>Course Highlights:</strong> Calculus, Real Analysis, Algebra, Applied Statistics, Probability, Classical Physics, Optics, Quantum Physics, Solid-state physics</p>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

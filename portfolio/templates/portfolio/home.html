@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Home | MySite{% endblock %}
+
+{% block content %}
+<div class="d-flex flex-column justify-content-center align-items-center text-center"
+     style="min-height: calc(100vh - 180px); padding-top: 10px; padding-bottom: 10px;">
+
+    <h1 class="display-4 mb-2">Hi, I am Mingma Moktan</h1>
+
+    <p class="lead mb-3">
+        I am a Data Engineering student.<br>
+        I build ETL, ELT pipelines and other data solutions.
+    </p>
+
+    <div class="d-flex gap-3">
+        <a href="{% url 'projects' %}" class="btn btn-primary btn-lg">View Projects</a>
+        <a href="{% url 'about' %}" class="btn btn-primary btn-lg">About Me</a>
+    </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Projects | MySite{% endblock %}
+
+{% block content %}
+
+<style>
+    /* Flex grid for project boxes */
+    .projects-flex {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .project-box {
+        background-color: #121212;
+        color: #fff;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        flex: 1 1 calc(33.33% - 1rem); /* Three columns per row */
+        min-width: 250px; /* ensures responsiveness on smaller screens */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    /* .project-box img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 0.5rem;
+        margin-bottom: 0.5rem;
+    } */
+
+    .project-box h5 {
+        margin-bottom: 0.5rem;
+    }
+
+    .project-box p {
+        flex-grow: 1; /* makes description fill available space */
+        margin-bottom: 0.5rem;
+    }
+
+    .project-box a {
+        align-self: flex-start;
+    }
+
+    @media (max-width: 992px) {
+        .project-box {
+            flex: 1 1 calc(50% - 1rem); /* 2 columns on medium screens */
+        }
+    }
+
+    @media (max-width: 576px) {
+        .project-box {
+            flex: 1 1 100%; /* 1 column on small screens */
+        }
+    }
+
+    /* Even margin top/bottom for section */
+    .projects-header {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+</style>
+
+<div class="text-center projects-header">
+    <h1 class="display-4">My Projects</h1>
+    <p class="lead">Here are some projects I've built. Click to explore!</p>
+</div>
+
+<div class="projects-flex">
+    {% for project in projects %}
+    <div class="project-box">
+        {# <img src="{% static 'portfolio/images/default_project.png' %}" alt="{{ project.name }}"> #}
+        <h5><i class="bi bi-folder"></i> {{ project.name|capfirst }}</h5>
+        <p>{{ project.description }}</p>
+        <a href="{{ project.html_url }}" target="_blank" class="btn btn-primary btn-sm">View Project</a>
+    </div>
+    {% empty %}
+    <p class="text-center text-muted">No projects available at the moment.</p>
+    {% endfor %}
+</div>
+
+{% endblock %}
