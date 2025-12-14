@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{ post.title }} | MySite{% endblock %}
+
+{% block content %}
+<div class="container pt-5 mt-5 pb-5">
+    <h1 class="display-5 mb-4">{{ post.title }}</h1>
+    <p class="text-light mb-4 opacity-75">
+        By {{ post.author|default:"Mingma Moktan" }} 
+        on {{ post.published_date|date:"M d, Y"|default:"Dec 2025" }}
+    </p>
+    
+    {% if post.image %}
+    <img src="{{ post.image.url }}" class="img-fluid my-4 rounded shadow" alt="{{ post.title }}">
+    {% endif %}
+    
+    <div class="mt-4 post-content">
+        {{ post.content|safe }}
+    </div>
+
+    <hr class="my-5">
+    <div class="text-center mb-4">
+        <h5 class="mb-3">Share this post:</h5>
+        <div class="blog-share">
+            <a href="#" title="Facebook"><i class="bi bi-facebook fs-4 mx-2 text-light"></i></a>
+            <a href="#" title="Twitter"><i class="bi bi-twitter fs-4 mx-2 text-light"></i></a>
+            <a href="#" title="LinkedIn"><i class="bi bi-linkedin fs-4 mx-2 text-light"></i></a>
+        </div>
+    </div>
+    <div class="text-center">
+        <a href="{% url 'blog_list' %}" class="btn btn-primary btn-lg px-4 py-2 back-btn">
+            ← Back to Blog
+        </a>
+    </div>
+</div>
+{% endblock %}

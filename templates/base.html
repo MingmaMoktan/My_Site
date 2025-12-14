@@ -86,6 +86,17 @@
             transform: translateY(-2px);
             text-shadow: 0 2px 4px rgba(0,0,0,0.4);
         }
+        /* Blog post share buttons hover effect */
+        .blog-share a {
+            transition: all 0.3s ease;
+            font-size: 1.3rem;
+        }
+
+        .blog-share a:hover i {
+            color: #1e90ff !important;
+            transform: translateY(-2px);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+        }
     </style>
 </head>
 <body>
@@ -120,7 +131,7 @@
 
 
     <!-- Main content -->
-    <main class="container">
+    <main class="container pt-5">
         {% block content %}{% endblock %}
     </main>
 
