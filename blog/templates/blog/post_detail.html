@@ -23,9 +23,15 @@
     <div class="text-center mb-4">
         <h5 class="mb-3">Share this post:</h5>
         <div class="blog-share">
-            <a href="#" title="Facebook"><i class="bi bi-facebook fs-4 mx-2 text-light"></i></a>
-            <a href="#" title="Twitter"><i class="bi bi-twitter fs-4 mx-2 text-light"></i></a>
-            <a href="#" title="LinkedIn"><i class="bi bi-linkedin fs-4 mx-2 text-light"></i></a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" title="Facebook" target="_blank">
+                <i class="bi bi-facebook fs-4 mx-2 text-light"></i>
+            </a>
+            <a href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}&text={{ post.title }}" title="Twitter" target="_blank">
+                <i class="bi bi-twitter fs-4 mx-2 text-light"></i>
+            </a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ request.build_absolute_uri }}" title="LinkedIn" target="_blank">
+                <i class="bi bi-linkedin fs-4 mx-2 text-light"></i>
+            </a>
         </div>
     </div>
     <div class="text-center">
