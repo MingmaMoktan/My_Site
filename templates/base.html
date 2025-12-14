@@ -15,16 +15,6 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/global.css' %}">
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RPLZ6F5CFM"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-RPLZ6F5CFM');
-    </script>
-
     <style>
         /* Body layout */
         body {
@@ -139,12 +129,11 @@
         </div>
     </nav>
 
-
     <!-- Main content -->
     <main class="container pt-5">
         {% block content %}{% endblock %}
     </main>
-
+    
     <!-- Footer -->
     <footer>
         <p class="mb-1">
