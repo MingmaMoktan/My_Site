@@ -1,0 +1,66 @@
+/* Reset & Body */
+html, body {
+    min-height: 100vh;
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding-top: 40px; /* space for fixed navbar */
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* Links */
+a {
+    color: #1e90ff;
+}
+a:hover {
+    color: #63b3ed;
+    text-decoration: none;
+}
+
+/* Navbar */
+#main-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+    transition: top 0.3s ease;
+}
+
+/* Main content */
+main {
+    flex: 1;
+}
+
+/* Footer */
+footer {
+    background-color: #1f1f1f;
+    color: #a0a0a0;
+    padding: 0.75rem 0;
+    text-align: center;
+}
+footer a {
+    margin: 0 6px;
+}
+footer a i {
+    transition: all 0.3s ease;
+    font-size: 1.3rem;
+}
+footer a:hover i {
+    color: #1e90ff;
+    transform: translateY(-2px);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+/* Blog share hover */
+.blog-share a {
+    transition: all 0.3s ease;
+    font-size: 1.3rem;
+}
+.blog-share a:hover i {
+    color: #1e90ff !important;
+    transform: translateY(-2px);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
