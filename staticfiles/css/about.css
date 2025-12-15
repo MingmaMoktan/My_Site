@@ -1,0 +1,110 @@
+/* Profile Section */
+.profile-section {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.profile-section img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.profile-section a i {
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.profile-section a:hover i {
+    transform: scale(1.25);
+    color: #0d6efd;
+}
+
+.profile-section h1 {
+    margin-bottom: 0.5rem;
+}
+
+.profile-section .lead {
+    margin-bottom: 0.5rem;
+}
+
+.profile-section p.text-secondary {
+    margin-bottom: 1rem;
+    color: #ccc;
+}
+
+/* General Section Spacing */
+.section {
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+}
+
+/* Experience Items */
+.experience-item {
+    margin-bottom: 1rem;
+}
+
+.experience-item h5 {
+    margin-bottom: 0.2rem;
+}
+
+.experience-item p.text-muted {
+    margin-bottom: 0.3rem;
+}
+
+.experience-item ul li {
+    margin-bottom: 0.2rem;
+}
+
+/* Education Items */
+.education-item {
+    margin-bottom: 1rem;
+}
+
+.education-item h5 {
+    margin-bottom: 0.2rem;
+}
+
+.education-item p {
+    margin-bottom: 0.3rem;
+}
+
+/* Skill Boxes Flex Grid */
+.skills-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.skill-box {
+    background-color: #121212;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    flex: 1 1 calc(33.33% - 1rem);
+    min-width: 250px;
+}
+
+.skill-box ul {
+    padding-left: 1.2rem;
+    margin-bottom: 0;
+}
+
+.skill-box ul li {
+    margin-bottom: 0.2rem;
+}
+
+@media (max-width: 992px) {
+    .skill-box {
+        flex: 1 1 calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .skill-box {
+        flex: 1 1 100%;
+    }
+}

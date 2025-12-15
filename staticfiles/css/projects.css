@@ -1,0 +1,48 @@
+/* Flex grid for project boxes */
+.projects-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.project-box {
+    background-color: #121212;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    flex: 1 1 calc(33.33% - 1rem);
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-box h5 {
+    margin-bottom: 0.5rem;
+}
+
+.project-box p {
+    flex-grow: 1;
+    margin-bottom: 0.5rem;
+}
+
+.project-box a {
+    align-self: flex-start;
+}
+
+@media (max-width: 992px) {
+    .project-box {
+        flex: 1 1 calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 576px) {
+    .project-box {
+        flex: 1 1 100%;
+    }
+}
+
+.projects-header {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
