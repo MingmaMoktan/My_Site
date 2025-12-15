@@ -5,10 +5,17 @@ html, body {
     color: #e0e0e0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    padding-top: 40px; /* space for fixed navbar */
+    padding-top: 30px; /* space for fixed navbar */
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
+}
+
+/* Home Page Hero Section */
+.home-hero {
+    min-height: calc(90vh - 150px);
+    padding-top: 10px;
+    /* padding-bottom: 10px; */
 }
 
 /* Links */
@@ -63,4 +70,8 @@ footer a:hover i {
     color: #1e90ff !important;
     transform: translateY(-2px);
     text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.post-card h5 {
+    margin-bottom: 1rem; /* adds space between title and button */
 }

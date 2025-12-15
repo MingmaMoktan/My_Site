@@ -28,7 +28,7 @@
         <div class="row">
             {% for post in posts %}
                 <div class="col-md-4 mb-4">
-                    <div class="p-3 bg-dark text-light rounded h-100 d-flex flex-column justify-content-between">
+                    <div class="p-3 bg-dark text-light rounded h-100 d-flex flex-column justify-content-between post-card">
                         <h5>{{ post.title }}</h5>
                         <a href="{{ post.get_absolute_url }}" class="btn btn-primary mt-auto btn-sm">Read More</a>
                     </div>
