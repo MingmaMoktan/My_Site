@@ -11,13 +11,16 @@
     object-fit: cover;
 }
 
+/* Profile Icons — SAME hover effect as footer */
 .profile-section a i {
-    transition: transform 0.2s ease, color 0.2s ease;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
 }
 
 .profile-section a:hover i {
-    transform: scale(1.25);
-    color: #0d6efd;
+    color: #1e90ff;
+    transform: translateY(-2px);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
 }
 
 .profile-section h1 {
@@ -50,10 +53,6 @@
 
 .experience-item h5 {
     margin-bottom: 0.2rem;
-}
-
-.experience-item p.text-muted {
-    margin-bottom: 0.3rem;
 }
 
 .experience-item ul li {

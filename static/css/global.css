@@ -5,7 +5,7 @@ html, body {
     color: #e0e0e0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    padding-top: 30px; /* space for fixed navbar */
+    padding-top: 30px;
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
@@ -15,7 +15,6 @@ html, body {
 .home-hero {
     min-height: calc(90vh - 150px);
     padding-top: 10px;
-    /* padding-bottom: 10px; */
 }
 
 /* Links */
@@ -73,5 +72,33 @@ footer a:hover i {
 }
 
 .post-card h5 {
-    margin-bottom: 1rem; /* adds space between title and button */
+    margin-bottom: 1rem;
+}
+
+/* ========================= */
+/* Unified Button Styling   */
+/* ========================= */
+.btn {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #1e90ff; /* soft blue background */
+    color: #ffffff; /* white text for contrast */
+    transform: translateY(-2px);
+    /* May be I will add the box shadow later */
+    /* box-shadow: */
+        /* 0 6px 10px #1e90ff; */
+}
+
+.btn:focus,
+.btn:active {
+    background-color: #1e90ff;
+    color: #ffffff;
+
+    /* box-shadow: */
+        /* 0 4px 8px #1e90ff; */
 }
