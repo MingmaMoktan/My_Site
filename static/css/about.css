@@ -1,133 +1,97 @@
-/* --- Profile Section --- */
-.profile-section {
-    margin-top: 20px;
-    margin-bottom: 40px;
-    text-align: center;
-}
-
-.profile-section img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border: 3px solid #1e90ff;
-    padding: 3px;
-}
-
-.profile-section a i {
-    font-size: 1.4rem;
-    transition: all 0.3s ease;
-}
-
-.profile-section a:hover i {
-    color: #1e90ff;
-    transform: translateY(-2px);
-}
-
-/* --- Professional Summary Card --- */
-.summary-card {
-    background: linear-gradient(145deg, #161616, #1a1a1a);
-    padding: 1.5rem;
-    border-radius: 12px;
-    border-left: 4px solid #1e90ff;
-    line-height: 1.6;
-}
-
-.lead-text {
-    font-size: 1.1rem;
-    color: #fff;
-    margin-bottom: 12px;
-}
-
-/* --- Section Headers --- */
-.section { margin-bottom: 3rem; }
+/* --- Global Styles --- */
+.section { margin-bottom: 3.5rem; }
 .section-title { 
-    margin-bottom: 1.2rem; 
+    margin-bottom: 1.5rem; 
     font-weight: 600; 
     border-bottom: 1px solid #333;
-    padding-bottom: 8px;
+    padding-bottom: 10px;
 }
 
-/* --- Technical Skills Grid --- */
+.profile-section { text-align: center; margin-bottom: 50px; }
+.profile-img { 
+    width: 160px; height: 175px; 
+    border: 3px solid #1e90ff; 
+    padding: 3px; 
+    transition: 0.3s;
+}
+
+.social-links a {
+    color: #fff;
+    margin: 0 12px;
+    font-size: 1.5rem;
+    transition: 0.3s;
+    display: inline-block;
+}
+.social-links a:hover { color: #1e90ff; transform: translateY(-4px); }
+
+/* --- Summary Card Brightness --- */
+.summary-card {
+    background: #1a1a1a;
+    padding: 1.8rem;
+    border-radius: 12px;
+    border-left: 6px solid #1e90ff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.lead-text {
+    font-size: 1.25rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+.text-bright {
+    color: #ffffff !important;
+    line-height: 1.7;
+}
+
+/* --- Skill Badges Grid --- */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
 }
-
 .skill-category {
     background: #111;
-    padding: 1.2rem;
-    border-radius: 10px;
+    padding: 1.5rem;
+    border-radius: 12px;
     border: 1px solid #222;
 }
-
-.skill-category h6 { 
-    font-size: 0.9rem; 
-    margin-bottom: 15px; 
-    color: #1e90ff; 
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
+.skill-category h6 { color: #1e90ff; text-transform: uppercase; margin-bottom: 15px; font-size: 0.85rem; }
 .badge-container { display: flex; flex-wrap: wrap; gap: 10px; }
-
 .skill-badge {
-    background: #1f1f1f;
-    color: #ddd;
+    background: #252525;
     padding: 5px 12px;
     border-radius: 6px;
     font-size: 0.85rem;
     border: 1px solid #333;
-    transition: 0.3s;
 }
+.skill-badge.learning { border: 1px dashed #1e90ff; color: #1e90ff; }
 
-.skill-badge.learning {
-    border: 1px dashed #1e90ff;
-    color: #1e90ff;
-}
-
-/* --- Legend Helpers --- */
-.legend-solid, .legend-dashed {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    margin-right: 5px;
-    border-radius: 2px;
-}
+/* Legend */
+.legend-box { display: inline-block; width: 10px; height: 10px; margin-right: 5px; }
 .legend-solid { background: #333; border: 1px solid #555; }
 .legend-dashed { border: 1px dashed #1e90ff; }
 
-/* --- Certifications --- */
-.cert-list li { margin-bottom: 10px; }
-.cert-list a { text-decoration: none; color: #fff; transition: 0.3s; }
-.cert-list a:hover { color: #1e90ff; }
+/* --- Experience & Certs --- */
+.experience-item ul { padding-left: 1.2rem; }
+.cert-list { list-style: none; padding-left: 0; }
+.cert-list li { margin-bottom: 12px; }
+.cert-list a { color: #fff; text-decoration: none; border-bottom: 1px solid transparent; transition: 0.3s; }
+.cert-list a:hover { color: #1e90ff; border-bottom: 1px solid #1e90ff; }
 
-/* --- Education Logo Boxes --- */
+/* --- Education Logos --- */
 .logo-box {
-    width: 80px;
-    height: 80px;
+    width: 85px; height: 85px;
     background-color: #fff;
-    padding: 8px;
-    border-radius: 8px;
+    padding: 10px;
+    border-radius: 10px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
+    transition: transform 0.3s ease;
 }
+.logo-box:hover { transform: scale(1.1); }
+.logo-box a { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+.logo-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
 
-.logo-box img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-
-/* --- Mobile Responsiveness --- */
-@media (max-width: 768px) {
-    .skills-grid { grid-template-columns: 1fr; }
-}
-
+/* --- Mobile Logic --- */
 @media (max-width: 576px) {
     .education-item { flex-direction: column; text-align: center; align-items: center !important; }
     .logo-box { margin-right: 0 !important; margin-bottom: 15px; }
-    .summary-card { padding: 1rem; }
 }
