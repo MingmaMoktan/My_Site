@@ -4,10 +4,9 @@
 {% block title %}About | Mingma Moktan{% endblock %}
 
 {% block content %}
-
 <link rel="stylesheet" href="{% static 'css/about.css' %}">
 
-    <!-- Profile Section -->
+<div class="container mt-4">
     <div class="profile-section">
         <img src="{% static 'portfolio/images/profile.jpg' %}" alt="Profile Picture" class="rounded-circle mb-3">
         <h1 class="display-5 fw-bold">Mingma Moktan</h1>
@@ -19,167 +18,140 @@
             <a href="https://www.linkedin.com/in/mingma-moktan/" target="_blank" class="text-light mx-2"><i class="bi bi-linkedin"></i></a>
             <a href="https://github.com/MingmaMoktan" target="_blank" class="text-light mx-2"><i class="bi bi-github"></i></a>
         </p>
-
         <p class="text-secondary">Pori, Finland • 28130</p>
     </div>
 
-    <!-- Professional Summary -->
     <div class="section">
         <h3 class="section-title"><i class="bi bi-person-vcard"></i> Professional Summary</h3>
-        <p>
-            I am a highly motivated and detail-oriented student of Artificial Intelligence and Data Engineering,
-            with strong technical, analytical, and organizational skills. Adept at applying data engineering,
-            IT support, laboratory assistance, and mechanical maintenance experience to deliver reliable,
-            structured, and efficient results. I am open to new opportunities to contribute.
-        </p>
+        <div class="summary-card">
+            <p class="lead-text">
+                Analytical <strong>Data Engineering student</strong> with a background in <strong>Physics</strong>, 
+                combining a strong mathematical foundation with modern technical expertise in 
+                <strong>Python, SQL, and Cloud environments</strong>.
+            </p>
+            <p class="mb-0">
+                Currently maintaining a <strong>4.33 GPA</strong> at SAMK, I specialize in building efficient data 
+                pipelines and applying Machine Learning to solve complex problems. With prior experience managing 
+                digital databases for 900+ users, I am highly detail-oriented and focused on delivering structured, 
+                scalable, and efficient data results.
+            </p>
+        </div>
     </div>
 
-    <!-- Professional Experience -->
+    <div class="section">
+        <h3 class="section-title"><i class="bi bi-tools"></i> Technical Skills & Tech Stacks</h3>
+        <div class="skills-grid">
+            
+            <div class="skill-category">
+                <h6><i class="bi bi-code-slash"></i> Data Engineering & Programming</h6>
+                <div class="badge-container">
+                    <span class="skill-badge">Python</span>
+                    <span class="skill-badge">SQL</span>
+                    <span class="skill-badge">Bash</span>
+                    <span class="skill-badge">Pandas</span>
+                    <span class="skill-badge">NumPy</span>
+                    <span class="skill-badge learning">Apache Spark</span>
+                    <span class="skill-badge learning">Airflow</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h6><i class="bi bi-database"></i> Database & Cloud</h6>
+                <div class="badge-container">
+                    <span class="skill-badge">MySQL</span>
+                    <span class="skill-badge">PostgreSQL</span>
+                    <span class="skill-badge">MongoDB</span>
+                    <span class="skill-badge">IBM Cloud</span>
+                    <span class="skill-badge learning">Snowflake</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h6><i class="bi bi-gear"></i> Tools & ETL</h6>
+                <div class="badge-container">
+                    <span class="skill-badge">Linux</span>
+                    <span class="skill-badge">Docker</span>
+                    <span class="skill-badge">dbt</span>
+                    <span class="skill-badge">Git</span>
+                    <span class="skill-badge">Web Scraping</span>
+                    <span class="skill-badge">JSON/CSV</span>
+                </div>
+            </div>
+        </div>
+        <div class="mt-3 text-end">
+            <small class="text-secondary">
+                <span class="legend-solid"></span> Solid = Proficient | 
+                <span class="legend-dashed"></span> Dashed = Currently Learning
+            </small>
+        </div>
+    </div>
+
     <div class="section">
         <h3 class="section-title"><i class="bi bi-briefcase"></i> Professional Experience</h3>
+        <div class="experience-item mb-4">
+            <h5 class="fw-bold">School Administration Technology Co-ordinator — Venus Public School</h5>
+            <p class="text-info small mb-2">Feb 2020 – May 2024</p>
+            <ul>
+                <li>Managed digital databases for 950+ students and 40 staff, ensuring secure backups.</li>
+                <li>Oversaw network systems and academic management software for reports and records.</li>
+                <li>Led process automation to improve data access and efficiency.</li>
+            </ul>
+        </div>
 
         <div class="experience-item">
             <h5 class="fw-bold">Laboratory Assistant — Himalayan International Model School</h5>
-            <p class="text-light">Aug 2014 – Apr 2017</p>
+            <p class="text-info small mb-2">Aug 2014 – Apr 2017</p>
             <ul>
                 <li>Scheduled and prepared practical classes for Physics, Chemistry, and Biology.</li>
                 <li>Assisted teachers during lab sessions and ensured proper use of equipment.</li>
                 <li>Maintained laboratory chemicals, materials, instruments, and cleanliness.</li>
-                <li>Enforced safety rules and ensured a secure environment for students.</li>
-            </ul>
-        </div>
-
-        <div class="experience-item">
-            <h5 class="fw-bold">School Administration Technology Co-ordinator — Venus Public School</h5>
-            <p class="text-light">Feb 2020 – May 2024</p>
-            <ul>
-                <li>Managed digital databases for 950+ students and 40 staff, ensuring secure backups and data accuracy.</li>
-                <li>Oversaw network systems and academic management software for reports and records.</li>
-                <li>Supported administrative planning through documentation and technical coordination.</li>
-                <li>Led process automation to improve data access and efficiency.</li>
             </ul>
         </div>
     </div>
 
-    <!-- Technical Skills / Tech Stacks -->
-    <div class="section">
-        <h3 class="section-title"><i class="bi bi-tools"></i> Technical Skills / Tech Stacks</h3>
-        <div class="skills-flex">
-            <div class="skill-box">
-                <strong>Data Engineering & Programming:</strong>
-                <ul>
-                    <li>Python</li>
-                    <li>SQL</li>
-                    <li>Bash</li>
-                    <li>Apache Spark (learning)</li>
-                    <li>Airflow (learning)</li>
-                    <li>Pandas</li>
-                    <li>NumPy</li>
-                </ul>
-            </div>
-            <div class="skill-box">
-                <strong>Database & Cloud:</strong>
-                <ul>
-                    <li>MySQL</li>
-                    <li>PostgreSQL</li>
-                    <li>MongoDB</li>
-                    <li>Snowflake (learning)</li>
-                    <li>IBM Cloud</li>
-                </ul>
-            </div>
-            <div class="skill-box">
-                <strong>ETL & Data Modeling:</strong>
-                <ul>
-                    <li>Python ETL scripts</li>
-                    <li>dbt</li>
-                    <li>Snowflake Schema (learning)</li>
-                    <li>Data lakes</li>
-                    <li>JSON</li>
-                    <li>CSV</li>
-                </ul>
-            </div>
-            <div class="skill-box">
-                <strong>Tools & Environments:</strong>
-                <ul>
-                    <li>Linux</li>
-                    <li>Windows</li>
-                    <li>Docker (basics)</li>
-                    <li>VS Code</li>
-                    <li>JupyterLab</li>
-                    <li>Agile concepts</li>
-                    <li>CI/CD basics</li>
-                    <li>Hadoop basics</li>
-                    <li>Apache spark (learning)</li>
-                </ul>
-            </div>
-            <div class="skill-box">
-                <strong>Visualization and Analytics:</strong>
-                <ul>
-                    <li>Matplotlib</li>
-                    <li>Looker google (basics)</li>
-                    <li>IBM cognos (basics)</li>
-                </ul>
-            </div>
-            <div class="skill-box">
-                <strong>Other:</strong>
-                <ul>
-                    <li>Error handling</li>
-                    <li>Documentation</li>
-                    <li>Archiving</li>
-                    <li>Web scraping</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div>
-        <h3><a href="{% url 'projects' %}" class="pb-4 d-inline-block">View All My Projects Here</a></h3>
-    </div>    
-
-    <!-- Certifications -->
     <div class="section">
         <h3 class="section-title"><i class="bi bi-award"></i> Certifications</h3>
-        <ul>
-            <li>IBM Data Engineering Professional Certificate (In Progress)</li>
+        <ul class="cert-list">
+            <li>IBM Data Engineering Professional Certificate <span class="badge bg-primary ms-2">In Progress</span></li>
             <li>
-                <a href="https://courses.cognitiveclass.ai/certificates/41a48ea3f745412b9c0609f50b917e8c" target="_blank">
-                    Python 101 for data science
-                </a>
+                <a href="{% static 'portfolio/documents/codeit_certificate.pdf' %}" target="_blank">Django Development — Code IT</a> 
+                | <a href="https://codeit.com.np/" target="_blank" class="small text-info">Institution Site</a>
             </li>
-            <li>
-                <a href="https://courses.cognitiveclass.ai/certificates/74802a1a934c4b63b3ec959a84df5553" target="_blank">
-                    Data Science 101 Cognitive class AI
-                </a>
-            </li>
-            <li>
-                <a href="https://www.coursera.org/account/accomplishments/verify/65M64WSXXMW6" target="_blank">
-                    Getting Started with Microsoft Excel
-                </a>
-            </li>
-            <li>
-                <a href="https://www.credly.com/users/mingma-moktan" target="_blank">
-                    View My Credly Badges
-                </a>
-            </li>
+            <li><a href="https://courses.cognitiveclass.ai/certificates/41a48ea3f745412b9c0609f50b917e8c" target="_blank">Python 101 for Data Science</a></li>
+            <li><a href="https://www.credly.com/users/mingma-moktan" target="_blank">View My Credly Badges</a></li>
         </ul>
     </div>
 
-    <!-- Education -->
     <div class="section">
         <h3 class="section-title"><i class="bi bi-mortarboard"></i> Education</h3>
 
-        <div class="education-item">
-            <h5 class="fw-bold">Bachelor of Engineering — AI & Data Engineering</h5>
-            <p class="text-light">Satakunta University of Applied Sciences — Pori, Finland (August 2024 – Ongoing)</p>
-            <p>GPA: 4.33</p>
-            <p><strong>Relevant Courses:</strong> Python scripting, SQL, NoSQL, Data Structures, Machine Learning, Deep Learning, Neural Networks, Data Analytics, Server-side programming</p>
+        <div class="education-item d-flex align-items-start mb-4">
+            <div class="logo-box me-3">
+                <img src="{% static 'portfolio/images/SAMK_logo.png' %}" alt="SAMK Logo">
+            </div>
+            <div>
+                <h5 class="fw-bold">Bachelor of Engineering — AI & Data Engineering</h5>
+                <p class="text-light mb-1">Satakunta University of Applied Sciences — Pori, Finland</p>
+                <p class="mb-1 text-info fw-bold small">GPA: 4.33 (Aug 2024 – Ongoing)</p>
+                <p class="small text-secondary">Focus: Machine Learning, Deep Learning, SQL/NoSQL, and Data Analytics.</p>
+            </div>
         </div>
 
-        <div class="education-item">
-            <h5 class="fw-bold">Bachelor of Science — Physics</h5>
-            <p class="text-light">Tribhuvan University — Kathmandu, Nepal (May 2015 – June 2020)</p>
-            <p>GPA: 2.5</p>
-            <p><strong>Course Highlights:</strong> Calculus, Real Analysis, Algebra, Applied Statistics, Probability, Classical Physics, Optics, Quantum Physics, Solid-state physics</p>
+        <div class="education-item d-flex align-items-start">
+            <div class="logo-box me-3">
+                <img src="{% static 'portfolio/images/TU_logo.png' %}" alt="TU Logo">
+            </div>
+            <div>
+                <h5 class="fw-bold">Bachelor of Science — Physics</h5>
+                <p class="text-light mb-1">Tribhuvan University — Kathmandu, Nepal</p>
+                <p class="mb-1 text-secondary small">(May 2015 – June 2020)</p>
+                <p class="small text-secondary">Calculus, Applied Statistics, Probability, and Quantum Physics.</p>
+            </div>
         </div>
     </div>
+    
+    <div class="text-center mt-5 mb-5">
+        <a href="{% url 'projects' %}" class="btn btn-outline-primary btn-lg">View My Technical Projects</a>
+    </div>
+</div>
 {% endblock %}

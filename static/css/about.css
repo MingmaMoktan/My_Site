@@ -1,4 +1,4 @@
-/* Profile Section */
+/* --- Profile Section --- */
 .profile-section {
     margin-top: 20px;
     margin-bottom: 40px;
@@ -9,9 +9,10 @@
     width: 150px;
     height: 150px;
     object-fit: cover;
+    border: 3px solid #1e90ff;
+    padding: 3px;
 }
 
-/* Profile Icons — SAME hover effect as footer */
 .profile-section a i {
     font-size: 1.4rem;
     transition: all 0.3s ease;
@@ -20,90 +21,113 @@
 .profile-section a:hover i {
     color: #1e90ff;
     transform: translateY(-2px);
-    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
 }
 
-.profile-section h1 {
-    margin-bottom: 0.5rem;
+/* --- Professional Summary Card --- */
+.summary-card {
+    background: linear-gradient(145deg, #161616, #1a1a1a);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid #1e90ff;
+    line-height: 1.6;
 }
 
-.profile-section .lead {
-    margin-bottom: 0.5rem;
+.lead-text {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 12px;
 }
 
-.profile-section p.text-secondary {
-    margin-bottom: 1rem;
-    color: #ccc;
+/* --- Section Headers --- */
+.section { margin-bottom: 3rem; }
+.section-title { 
+    margin-bottom: 1.2rem; 
+    font-weight: 600; 
+    border-bottom: 1px solid #333;
+    padding-bottom: 8px;
 }
 
-/* General Section Spacing */
-.section {
-    margin-bottom: 2rem;
+/* --- Technical Skills Grid --- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
 }
 
-.section-title {
-    margin-bottom: 0.6rem;
-    font-weight: 600;
+.skill-category {
+    background: #111;
+    padding: 1.2rem;
+    border-radius: 10px;
+    border: 1px solid #222;
 }
 
-/* Experience Items */
-.experience-item {
-    margin-bottom: 1rem;
+.skill-category h6 { 
+    font-size: 0.9rem; 
+    margin-bottom: 15px; 
+    color: #1e90ff; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.experience-item h5 {
-    margin-bottom: 0.2rem;
+.badge-container { display: flex; flex-wrap: wrap; gap: 10px; }
+
+.skill-badge {
+    background: #1f1f1f;
+    color: #ddd;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    border: 1px solid #333;
+    transition: 0.3s;
 }
 
-.experience-item ul li {
-    margin-bottom: 0.2rem;
+.skill-badge.learning {
+    border: 1px dashed #1e90ff;
+    color: #1e90ff;
 }
 
-/* Education Items */
-.education-item {
-    margin-bottom: 1rem;
+/* --- Legend Helpers --- */
+.legend-solid, .legend-dashed {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+    border-radius: 2px;
 }
+.legend-solid { background: #333; border: 1px solid #555; }
+.legend-dashed { border: 1px dashed #1e90ff; }
 
-.education-item h5 {
-    margin-bottom: 0.2rem;
-}
+/* --- Certifications --- */
+.cert-list li { margin-bottom: 10px; }
+.cert-list a { text-decoration: none; color: #fff; transition: 0.3s; }
+.cert-list a:hover { color: #1e90ff; }
 
-.education-item p {
-    margin-bottom: 0.3rem;
-}
-
-/* Skill Boxes Flex Grid */
-.skills-flex {
+/* --- Education Logo Boxes --- */
+.logo-box {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 8px;
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
-.skill-box {
-    background-color: #121212;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    flex: 1 1 calc(33.33% - 1rem);
-    min-width: 250px;
+.logo-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 
-.skill-box ul {
-    padding-left: 1.2rem;
-    margin-bottom: 0;
-}
-
-.skill-box ul li {
-    margin-bottom: 0.2rem;
-}
-
-@media (max-width: 992px) {
-    .skill-box {
-        flex: 1 1 calc(50% - 1rem);
-    }
-}
-
+/* --- Mobile Responsiveness --- */
 @media (max-width: 768px) {
-    .skill-box {
-        flex: 1 1 100%;
-    }
+    .skills-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 576px) {
+    .education-item { flex-direction: column; text-align: center; align-items: center !important; }
+    .logo-box { margin-right: 0 !important; margin-bottom: 15px; }
+    .summary-card { padding: 1rem; }
 }
