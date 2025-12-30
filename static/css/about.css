@@ -9,10 +9,10 @@
 
 .profile-section { text-align: center; margin-bottom: 50px; }
 .profile-img { 
-    width: 160px; height: 175px; 
+    width: 170px; height: 185px; 
     border: 3px solid #1e90ff; 
     padding: 3px; 
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 .social-links a {
